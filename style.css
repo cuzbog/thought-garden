@@ -101,6 +101,7 @@
 html {
   scroll-behavior: smooth;
   -webkit-tap-highlight-color: transparent;
+  overflow-x: hidden;
 }
 
 body {
@@ -109,6 +110,7 @@ body {
   color: var(--text);
   line-height: 1.6;
   min-height: 100dvh;
+  overflow-x: hidden;
   transition: background var(--duration-normal) ease, color var(--duration-normal) ease;
   -webkit-font-smoothing: antialiased;
 }
@@ -600,7 +602,7 @@ h3 { font-size: 1.1rem; }
   background: var(--surface);
   color: var(--text);
   font-family: inherit;
-  font-size: 0.92rem;
+  font-size: 1rem; /* 16px — prevents iOS auto-zoom on focus */
   line-height: 1.6;
   resize: vertical;
   min-height: 120px;
@@ -621,7 +623,7 @@ h3 { font-size: 1.1rem; }
   background: var(--surface);
   color: var(--text);
   font-family: inherit;
-  font-size: 0.9rem;
+  font-size: 1rem; /* 16px — prevents iOS auto-zoom on focus */
   transition: border-color var(--duration-fast) ease, box-shadow var(--duration-fast) ease;
 }
 .text-input::placeholder { color: var(--text-muted); }
